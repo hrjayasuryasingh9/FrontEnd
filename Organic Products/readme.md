@@ -1,49 +1,63 @@
-# Organic Products Website
+<!-- Project Title -->
+<h1 align="center">Organic Products Website</h1>
 
-![Website Preview](web.jpg)
+<!-- Project Description -->
+<p align="center">
+  A website showcasing various organic products, promoting a healthy lifestyle.
+</p>
 
-This is a simple website titled "Organic Products" showcasing various organic products and promoting a healthy lifestyle. The website is designed using HTML, CSS, JavaScript, Bootstrap, AOS for animations, and Font Awesome for icons.
+<!-- Preview Image -->
+<p align="center">
+  <img src="web.jpg" alt="Website Preview">
+</p>
 
+<!-- Badges -->
+<p align="center">
+  <a href="https://github.com/hrjayasuryasingh9/FrontEnd/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/hrjayasuryasingh9/FrontEnd?color=blue" alt="License">
+  </a>
+  <a href="https://github.com/hrjayasuryasingh9/FrontEnd/stargazers">
+    <img src="https://img.shields.io/github/stars/hrjayasuryasingh9/FrontEnd.svg?style=social&label=Star&maxAge=2592000" alt="GitHub stars">
+  </a>
+</p>
+
+<!-- Features -->
 ## Features
 
-- **Responsive Design**: Ensures optimal viewing experience across a wide range of devices.
-- **Bootstrap Framework**: Utilizes Bootstrap for layout, grid system, and components.
-- **Animations**: Uses AOS (Animate On Scroll) library for smooth animations.
-- **Iconography**: Includes Font Awesome for scalable vector icons.
+- **Responsive Design**: Ensures optimal viewing experience across devices.
+- **Bootstrap Framework**: Utilizes Bootstrap for layout and components.
+- **Animations**: Integrates AOS for smooth scrolling effects.
+- **Iconography**: Includes Font Awesome for scalable icons.
 - **Product Showcase**: Highlights a variety of organic products.
-- **Contact Form**: Provides a form for users to get in touch.
+- **Contact Form**: Enables users to get in touch.
 
+<!-- Technologies Used -->
 ## Technologies Used
 
-- **HTML**: Structuring the webpage.
-- **CSS**: Styling the elements and layout.
-- **JavaScript**: Adding interactive elements and functionality.
-- **Bootstrap**: Front-end framework for design and responsiveness.
-- **AOS**: Library for animated scrolling effects.
-- **Font Awesome**: Icon library for scalable vector icons.
+- **HTML**: Structure and content.
+- **CSS**: Styling and design.
+- **JavaScript**: Interactive elements and behavior.
+- **Bootstrap**: Responsive design and components.
+- **AOS**: Animate On Scroll library.
+- **Font Awesome**: Scalable vector icons.
 
+<!-- Screenshots -->
 ## Preview
 
-![Preview 1](fruit-1004887_1280.jpg)
+![Screenshot 1](fruit-1004887_1280.jpg)
 *Caption: Sample organic fruits showcased on the website.*
 
-![Preview 2](strawberries-7391738_1280.jpg)
+![Screenshot 2](strawberries-7391738_1280.jpg)
 *Caption: Fresh strawberries, another example of featured organic products.*
 
+<!-- Website Link -->
+## Website Link
+
+Explore the website: [Organic Products](https://hrjayasuryasingh9.github.io/FrontEnd/Organic%20Products/)
+
+<!-- How to Use -->
 ## How to Use
 
-1. Clone the repository: `git clone https://github.com/hrjayasuryasingh9/FrontEnd.git`
-2. Navigate to the project directory.
-3. Open `index.html` in your web browser.
-
-## Contributing
-
-Contributions are welcome! Fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Created by HR Jaya Surya Singh - Find me on [LinkedIn](https://www.linkedin.com/in/hr-jaya-surya-singh-42693927b/) - [GitHub](https://github.com/hrjayasuryasingh9)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/hrjayasuryasingh9/FrontEnd.git
