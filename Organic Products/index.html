@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+PE&family=Poppins&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .Organic {
+      font-size: 2rem;
+      color: black;
+      text-decoration: none;
+    }
+
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .playwrite-pe {
+      font-family: "Playwrite PE", cursive;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .nav-link {
+      margin-right: 10px;
+      margin-left: 10px;
+      color: black;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover {
+      color: black;
+    }
+
+    .search {
+      height: 40px;
+      width: 80%;
+      border-radius: 60px;
+      outline: none;
+      margin-right: -35px;
+      border: 2px solid rgb(246, 26, 92);
+    }
+
+    .btn0 {
+      height: 40px;
+      width: 40%;
+      outline: none;
+      border: none;
+      background: rgb(246, 26, 92);
+      color: white;
+      font-weight: 700;
+      border-radius: 60px;
+    }
+
+    .main {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(image.png)no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      background-position: 100%;
+    }
+
+    .main h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: black;
+    }
+
+    .btn1 {
+      height: 45px;
+      width: 35%;
+      border: none;
+      outline: none;
+      background-color: rgb(245, 72, 124);
+      color: white;
+      font-weight: 700;
+      border-radius: 60px;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    .btn1:hover {
+      background-color: rgba(255, 0, 76, 0.874);
+      transition: 0.5s;
+    }
+
+    .card:hover {
+      box-shadow: -3px 8px 50px -1px rgba(0, 0, 0, 0.7);
+      -webkit-box-shadow: -3px 8px 50px -1px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: -3px 8px 50px -1px rgba(0, 0, 0, 0.7);
+      transition: 0.5s;
+
+    }
+
+    .apple {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(dreamy-young-european-lady-keeps-finger-near-lips-holds-fresh-delicious-apple-thinks-about-cooking-pie.jpg)no-repeat;
+      background-size: cover;
+      background-position: 70%;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .news {
+      background: black;
+      color: white;
+    }
+
+    .btn2 {
+      width: 100px;
+      height: 45px;
+      background: white;
+      margin-left: -10px;
+      border: 2px solid white;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .news input {
+      height: 45px;
+      width: 55%;
+      border: 2px solid white;
+      outline: none;
+      background: black;
+      color: white;
+      margin-top: 20.85px;
+      font-weight: 600;
+    }
+
+    .news::placeholder {
+      color: white;
+    }
+
+    .news p {
+      margin: 0;
+    }
+
+    .fab {
+      font-size: 2.5rem;
+      cursor: pointer;
+      padding-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-in" data-aos-duration="3000">
+    <div class="container-fluid">
+      <a class="navbar-brand Organic playwrite-pe" href="#">Organic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active poppins-regular" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link poppins-regular" aria-current="page" href="#">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link poppins-regular" aria-current="page" href="#">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link poppins-regular" aria-current="page" href="#">Organic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link poppins-regular" aria-current="page" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <section class="main">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-7 pt-5 text_center">
+          <h1 class="pt-5 " style="color: black;" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="1000">Nature Has Always Cared For Us !</h1>
+          <button class="btn1 mt-3 " data-aos="fade-in" data-aos-duration="3000" data-aos-delay="1000">More Tips </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="new">
+    <div class="container-fluid py-5">
+      <div class="row pt-2">
+        <div class="col-lg-7 m-auto">
+          <div class="row text-center">
+            <div class="col-lg-4 pt-3" data-aos="fade-up" data-aos-duration="1000">
+              <img src="organic-food.png" alt="" class="img-fluid " style="width: 50px;">
+              <h6>Natural</h6>
+            </div>
+            <div class="col-lg-4 pt-3" data-aos="fade-up" data-aos-duration="1000"><img src="basket.png" alt="" class="img_fluid " style="width: 50px;">
+              <h6 class="">Organic</h6>
+            </div>
+            <div class="col-lg-4 pt-3" data-aos="fade-up" data-aos-duration="1000"><img src="harvest.png" alt="" class="img_fluid" style="width: 50px;">
+              <h6>Health</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-5 m-auto text-center">
+          <h1 data-aos="zoom-out" data-aos-duration="1000">What's Treanding</h1>
+          <h6 data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" style="color: rgb(246, 26, 92) ;">Be Healthy Organic Food</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 text-center" data-aos="fade-right" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="41903-2-jar-of-honey-png-image-high-quality.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Honey</h6>
+          <p>$34.09</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="pngegg.png" style="width: 170px; height: 190px;" alt="" class="img-fluid">
+            </div>
+          </div>
+          <h6>Rice</h6>
+          <p>$23.08</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="pngwing.com.png" style="width: 170px; height: 190px;" alt=""
+                class="img-fluid"></div>
+          </div>
+          <h6>Oil</h6>
+          <p>$78.06</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_dry-fruit-transparent_23338225.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Dry Fruits</h6>
+          <p>$45.05</p>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-lg-6 m-auto text-center" data-aos="zoom-in" data-aos-duration="1000" ><button class="btn1">Click For More</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-8 m-auto text-center">
+          <h1 data-aos="zoom-in-up" data-aos-duration="1000">Welcome To Our Organic Food Socity</h1>
+          <h6 style="color: rgb(246, 26, 92) ;" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">Be Healthy Organic Food</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4"><img data-aos="zoom-in-right" data-aos-duration="1000" src="fruit-1004887_1280.jpg" alt="" class="img-fluid mb-3">
+          <h5 data-aos="fade-up" data-aos-duration="1000">Best Quality Product</h5>
+          <p data-aos="fade-up" data-aos-duration="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptates necessitatibus vitae, accusantium
+            beatae quidem et quo ad consectetur quod rerum temporibus amet distinctio provident deserunt assumenda nam
+            ab tenetur.</p>
+        </div>
+        <div class="col-lg-4"><img data-aos="zoom-in" data-aos-duration="1000" src="strawberries-7391738_1280.jpg" alt="" class="img-fluid mb-3">
+          <h5 data-aos="fade-up" data-aos-duration="1000">Organic Food</h5>
+          <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illum ipsa ab, magni, officiis est
+            nisi quod, unde accusamus provident libero veniam labore odit dolor consequuntur natus ea fugit eum.</p>
+        </div>
+        <div class="col-lg-4"><img data-aos="zoom-in-left" data-aos-duration="1000" src="pomegranates-7859172_1280.jpg" alt="" class="img-fluid mb-3">
+          <h5 data-aos="fade-up" data-aos-duration="1000">Best Quality Food</h5>
+          <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illum ipsa ab, magni, officiis est
+            nisi quod, unde accusamus provident libero veniam labore odit dolor consequuntur natus ea fugit eum.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 m-auto text-center" style="padding-top: 40px;" data-aos="zoom-out-up" data-aos-duration="1000" ><button class="btn1">Shop More</button></div>
+      </div>
+    </div>
+  </section>
+  <section class="shop">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-lg-8 m-auto text-center">
+          <h1 data-aos="zoom-in-up" data-aos-duration="1000">Explore Our Store</h1>
+          <h6 style="color:rgb(246, 26, 92) ;" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">Pick Your Product From Our Store</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 text-center" data-aos="fade-right" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_ai-generated-bread-in-basket-isolated-on-transparent-background_35879645.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Bread</h6>
+          <p>$14.07</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light" >
+            <div class="card-body"><img src="vecteezy_ai-generated-brown-sugar-cubes-piled-png_42654156.png" style="width: 170px; height: 190px;" alt="" class="img-fluid">
+            </div>
+          </div>
+          <h6>Brown Sugar</h6>
+          <p>$42.02</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_ai-generated-egg-in-carton-png_35642273.png" style="width: 170px; height: 190px;" alt=""
+                class="img-fluid"></div>
+          </div>
+          <h6>Egg</h6>
+          <p>$10.46</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_ai-generated-fresh-turmeric-with-leaves-png-isolated-on_36112844.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Termeric</h6>
+          <p>$25.98</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 text-center" data-aos="fade-right" data-aos-duration="1000">
+          <div class="card border-0 bg-light" >
+            <div class="card-body"><img src="vecteezy_ai-generated-peanuts-in-wooden-bowl-isolated-on-transparent_36512755.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Peanuts</h6>
+          <p>$24.09</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_ai-generated-strawberry-jam-png_38065826.png" style="width: 170px; height: 190px;" alt="" class="img-fluid">
+            </div>
+          </div>
+          <h6>Jam</h6>
+          <p>$33.33</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_ai-generated-wooden-bowl-full-of-ripe-corn-seeds-isolated-on_35199437.png" style="width: 170px; height: 190px;" alt=""
+                class="img-fluid"></div>
+          </div>
+          <h6>Dal</h6>
+          <p>$34.44</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_bunch-of-potatoes-no-background_32161100.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Potatoes</h6>
+          <p>$22.22</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 text-center" data-aos="fade-right" data-aos-duration="1000">
+          <div class="card border-0 bg-light" >
+            <div class="card-body"><img src="vecteezy_fresh-raw-onions-on-wooden-cutting-board-ai-generated_28167476.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Oninon</h6>
+          <p>$41.09</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_kitchen-essentials-the-versatile-sugar-bowl-for-every-sweet_44902331.png" style="width: 170px; height: 190px;" alt="" class="img-fluid">
+            </div>
+          </div>
+          <h6>Sugar</h6>
+          <p>$33.44</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card border-0 bg-light" >
+            <div class="card-body"><img src="vecteezy_transparent-background-spa-accessories_47307768.png" style="width: 170px; height: 190px;" alt=""
+                class="img-fluid"></div>
+          </div>
+          <h6>Hair Oil</h6>
+          <p>$78.06</p>
+        </div>
+        <div class="col-lg-3 text-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="card border-0 bg-light">
+            <div class="card-body"><img src="vecteezy_perfume-bottle-with-orange-and-flowers_47130128.png"
+                style="width: 170px; height: 190px;" alt="" class="img-fluid"></div>
+          </div>
+          <h6>Perfume</h6>
+          <p>$55.05</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section >
+    <div class="apple py-5" data-aos="fade-in" data-aos-duration="2000">
+    <div class="container text-white py-5" >
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="font-weight-bold py-3 playwrite-pe" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1000">Unlock Your Potential With Good Nutrion</h1>
+          <h6 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="2000">Be Healthy Organic Food</h6>
+          <button class="btn1" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="2500">More From Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="contact py-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-5 m-auto text-center">
+          <h1 data-aos="zoom-in" data-aos-duration="1000">Contact Us</h1>
+          <h6 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" style="color: rgb(246, 26, 92) ;">Always Be In Touch With Us</h6>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-lg-9 m-auto">
+          <div class="row">
+            <div class="col-lg-4 py-2">
+              <h6 data-aos="zoom-in-right" data-aos-duration="1000">Location</h6>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">Andra Pradesh India</p>
+              <h6 data-aos="zoom-in-right" data-aos-duration="1000">Phone</h6>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">089765-90870</p>
+              <h6 data-aos="zoom-in-right" data-aos-duration="1000">Email</h6>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">jayasuryasingh@gmail.com</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row">
+                <div class="col-lg-6 py-2" data-aos="zoom-out-up" data-aos-duration="1000"><input type="text" class="form-control bg-light" placeholder="First Name">
+                </div>
+                <div class="col-lg-6 py-2" data-aos="zoom-out-up" data-aos-duration="1000"><input type="text" class="form-control bg-light" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 py-3" data-aos="zoom-out-up" data-aos-duration="1000"><textarea name="" placeholder="Enter Your Feedback" id=""
+                    class="form-control bg-light" cols="10" rows="5"></textarea></div>
+              </div>
+              <button class="btn1" data-aos="zoom-out-up" data-aos-duration="1000">Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="news py-5">
+    <div class="container py-5">
+      <div class="row ">
+        <div class="col-lg-9 m-auto text-center">
+          <h1 data-aos="zoom-in" data-aos-duration="1000">Join Our Secret Society</h1>
+          <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+          <input type="text" class="px-3" name="" id="" placeholder="Enter Your Email">
+          <button class="btn2">Submit</button>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="row text-center">
+            <div class="col-lg-3 py-3">
+              <h5 class="pb-3" data-aos="zoom-in-right" data-aos-duration="1000">Customer Care</h5>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">Regular</p>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">On Time</p>
+              <p data-aos="zoom-in-right" data-aos-duration="1000">Always Care</p>
+            </div>
+            <div class="col-lg-3 py-3">
+              <h5 class="pb-3" data-aos="zoom-in-down" data-aos-duration="1000">Available </h5>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">24/7</p>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">Fast Response</p>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">Connective</p>
+            </div>
+            <div class="col-lg-3 py-3">
+              <h5 class="pb-3" data-aos="zoom-in-down" data-aos-duration="1000">Performance</h5>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">High sales </p>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">Quality</p>
+              <p data-aos="zoom-in-down" data-aos-duration="1000">Quantity</p>
+            </div>
+            <div class="col-lg-3 py-3">
+              <h5 class="pb-3" data-aos="zoom-in-left" data-aos-duration="1000" >Customer Care</h5>
+              <i class="fab fa-facebook" data-aos="zoom-in-left" data-aos-duration="1000"></i>
+              <i class="fab fa-instagram" data-aos="zoom-in-left" data-aos-duration="1000"></i>
+              <i class="fab fa-twitter" data-aos="zoom-in-left" data-aos-duration="1000"></i>
+              <i class="fab fa-youtube" data-aos="zoom-in-left" data-aos-duration="1000"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-5" data-aos="zoom-in-up" data-aos-duration="1000">Copyright @2021 All rights Reserved | This templete is made by Jaya surya singh</p>
+    </div>
+  </section>
+  <script>
+    AOS.init();
+  </script>
+</body> 
+</html>
