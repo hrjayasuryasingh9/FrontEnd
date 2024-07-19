@@ -1,6 +1,6 @@
 # Organic Products Website
 
-![Website Preview](preview.png)
+![Website Preview](web.jpg)
 
 This is a simple website titled "Organic Products" showcasing various organic products and promoting a healthy lifestyle. The website is designed using HTML, CSS, JavaScript, Bootstrap, AOS for animations, and Font Awesome for icons.
 
@@ -24,11 +24,11 @@ This is a simple website titled "Organic Products" showcasing various organic pr
 
 ## Preview
 
-![Preview 1](screenshots/preview1.png)
-*Caption: Landing page showcasing organic products.*
+![Preview 1](fruit-1004887_1280.jpg)
+*Caption: Sample organic fruits showcased on the website.*
 
-![Preview 2](screenshots/preview2.png)
-*Caption: Contact form section.*
+![Preview 2](strawberries-7391738_1280.jpg)
+*Caption: Fresh strawberries, another example of featured organic products.*
 
 ## How to Use
 
