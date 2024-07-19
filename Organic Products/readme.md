@@ -46,5 +46,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Created by [Your Name] - Find me on [LinkedIn](https://www.linkedin.com/in/your-profile) - [GitHub](https://github.com/yourusername)
-
+Created by HR Jaya Surya Singh - Find me on [LinkedIn](https://www.linkedin.com/in/hr-jaya-surya-singh-42693927b/) - [GitHub](https://github.com/hrjayasuryasingh9)
