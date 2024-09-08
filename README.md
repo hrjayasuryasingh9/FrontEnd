@@ -14,13 +14,11 @@ Here are some of the standout projects included in this repository:
 
 A sleek and user-friendly calculator with real-time calculations and a clean interface.
 
-![Calculator](Calculator/calculator-preview.png)
+![Calculator](Calculator/calculator-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Calculator/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -28,14 +26,11 @@ A sleek and user-friendly calculator with real-time calculations and a clean int
 
 My personal portfolio showcasing my skills, background, and key projects in a modern and interactive design.
 
-![Personal Portfolio](Personal%20Portfolio/portfolio-preview.png)
+![Personal Portfolio](Personal%20Portfolio/portfolio-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Personal%20Portfolio/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
-![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) ![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
 
 ---
 
@@ -43,14 +38,11 @@ My personal portfolio showcasing my skills, background, and key projects in a mo
 
 A beautifully designed landing page that adjusts seamlessly across all devices, featuring smooth animations and a minimalist layout.
 
-![Landing Page](Responsive%20Landing%20Page/landing-page-preview.png)
+![Landing Page](Responsive%20Landing%20Page/landing-page-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Responsive%20Landing%20Page/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
-![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) ![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
 
 ---
 
@@ -58,13 +50,11 @@ A beautifully designed landing page that adjusts seamlessly across all devices, 
 
 A functional and stylish stopwatch with essential time tracking features and a responsive design.
 
-![Stopwatch](Stop%20Watch/stopwatch-preview.png)
+![Stopwatch](Stop%20Watch/stopwatch-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Stop%20Watch/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -72,13 +62,11 @@ A functional and stylish stopwatch with essential time tracking features and a r
 
 A handy tool for converting temperatures between Celsius, Fahrenheit, and Kelvin, with a clean and interactive interface.
 
-![Temperature Converter](Temparature%20Converter/temperature-converter-preview.png)
+![Temperature Converter](Temparature%20Converter/temperature-converter-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Temparature%20Converter/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -86,13 +74,11 @@ A handy tool for converting temperatures between Celsius, Fahrenheit, and Kelvin
 
 A classic Tic Tac Toe game with options for single-player and two-player modes, featuring a simple and engaging design.
 
-![Tic Tac Toe](Tic%20Tac%20Toe/tic-tac-toe-preview.png)
+![Tic Tac Toe](Tic%20Tac%20Toe/tic-tac-toe-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Tic%20Tac%20Toe/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -100,13 +86,11 @@ A classic Tic Tac Toe game with options for single-player and two-player modes, 
 
 A practical todo list app to manage tasks effectively, with features for adding, editing, and deleting tasks.
 
-![Todo List](Todo%20List/todo-list-preview.png)
+![Todo List](Todo%20List/todo-list-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Todo%20List/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -114,13 +98,11 @@ A practical todo list app to manage tasks effectively, with features for adding,
 
 A weather application providing current conditions and forecasts for any location, designed with a user-friendly interface.
 
-![Weather App](Weather%20App/weather-app-preview.png)
+![Weather App](Weather%20App/weather-app-preview.png)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Weather%20App/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -128,13 +110,11 @@ A weather application providing current conditions and forecasts for any locatio
 
 A beautifully designed webpage to display organic products, featuring a clean layout and user-friendly interface.
 
-![Organic Products](Organic%20Products/web.jpg)
+![Organic Products](Organic%20Products/web.jpg)  
 [**View Live Demo**](https://hrjayasuryasingh9.github.io/FrontEnd/Organic%20Products/)
 
 **Technologies Used:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
 
 ---
 
@@ -146,10 +126,7 @@ A beautifully designed webpage to display organic products, featuring a clean la
 - **Bootstrap**: For responsive design and UI components.
 
 **Icons:**
-![HTML5](https://img.icons8.com/color/48/000000/html-5.png)
-![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
-![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
+![HTML5](https://img.icons8.com/color/48/000000/html-5.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) ![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png)
 
 ---
 
