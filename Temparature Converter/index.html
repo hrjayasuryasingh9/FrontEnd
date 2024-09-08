@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .main {
+            background-color: #252a34;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 300px;
+            height: 370px;
+            border-radius: 10px;
+            border: 3px solid #08d9d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main h1 {
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            color: #08d9d6;
+        }
+
+        input {
+            width: 90%;
+            height: 30px;
+            color: white;
+            background-color: #252a34;
+            border-color: #08d9d6;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .result {
+            color: #ff2e63;
+        }
+
+        select {
+            width: 80%;
+            height: 30px;
+            color: white;
+            background-color: #252a34;
+            border-color: #08d9d6;
+            border-radius: 5px;
+        }
+
+        option {
+            color: white;
+        }
+
+        .daba {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .submit {
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #08d9d6;
+            width: 70px;
+            height: 30px;
+            border-radius: 6px;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Temperature Converter</h1>
+        <div class="container">
+            <form action="">
+                <div class="daba">
+                    <p class="name">Enter Temperature</p><input type="text" name="" id="temperatureInput">
+                </div>
+                <div class="daba">
+                    <p class="name">Type</p>
+                    <select name="" id="fromUnit">
+                        <option value="None">None</option>
+                        <option value="Kelvin">Kelvin</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Celsius">Celsius</option>
+                    </select>
+                </div>
+                <div class="daba">
+                    <p class="name">Convert Into </p>
+                    <select name="" id="toUnit">
+                        <option value="None">None</option>
+                        <option value="Kelvin">Kelvin</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Celsius">Celsius</option>
+                    </select>
+                    <button type="button" class="submit" onclick="convertTemperature()">Convert</button>
+                </div>
+                <p class="result name"><span id="result"></span></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function convertTemperature() {
+            const temperature = parseFloat(document.getElementById('temperatureInput').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+            let convertedTemp;
+
+            if (isNaN(temperature) || fromUnit === 'None' || toUnit === 'None') {
+                alert('Please enter a valid temperature and select units.');
+                return;
+            }
+
+            if (fromUnit === toUnit) {
+                convertedTemp = temperature; // No conversion needed
+            } else {
+                switch (fromUnit) {
+                    case 'Celsius':
+                        if (toUnit === 'Fahrenheit') {
+                            convertedTemp = (temperature * 9 / 5) + 32;
+                        } else if (toUnit === 'Kelvin') {
+                            convertedTemp = temperature + 273.15;
+                        }
+                        break;
+                    case 'Fahrenheit':
+                        if (toUnit === 'Celsius') {
+                            convertedTemp = (temperature - 32) * 5 / 9;
+                        } else if (toUnit === 'Kelvin') {
+                            convertedTemp = (temperature - 32) * 5 / 9 + 273.15;
+                        }
+                        break;
+                    case 'Kelvin':
+                        if (toUnit === 'Celsius') {
+                            convertedTemp = temperature - 273.15;
+                        } else if (toUnit === 'Fahrenheit') {
+                            convertedTemp = (temperature - 273.15) * 9 / 5 + 32;
+                        }
+                        break;
+                }
+            }
+
+            document.getElementById('result').innerHTML =`${temperature} <sup> O </sup>  ${fromUnit} equals to ${convertedTemp.toFixed(2)}<sup> O </sup> ${toUnit}`;
+        }
+    </script>
+</body>
+
+</html>

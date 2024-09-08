@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .background{
+            background-color: #252a34;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .title h1{
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .display{
+            color: white;
+            font-size: 25px;
+            padding-top: 10px;
+        }
+        .hide{
+            display: none;
+        }
+        .container{
+            padding-top: 10px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
+            max-width: 300px;
+        }
+        .tile{
+            border: 1px solid white;
+            min-width: 100px;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            cursor: pointer;
+        }
+        .tile:hover{
+            background-color: #343943;
+            transition: 0.3s ease-in-out;
+        }
+        .playerX{
+            color: #ff2e63 ;
+        }
+        .playerO{
+            color: #08d9d6;
+        }
+        .controls{
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #reset, #Home{
+            background-color: #ff2e63;
+            width: 230px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #reset:hover,#Home:hover{
+            background-color: #08d9d6;
+            width: 249px;
+            color: #000;
+            transition: 0.3s ease-in-out;
+        }
+        #Home a{
+            text-decoration: inherit;
+            outline: inherit;
+            border: inherit;
+            color: inherit;
+            width: inherit;
+            height: inherit;
+            background-color: inherit;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    const tiles = Array.from(document.querySelectorAll('.tile'));
+    const PlayerDisplay = document.querySelector('.display-player');
+    const resetButton = document.querySelector('#reset');
+    const announcer = document.querySelector('.announcer');
+
+    let board = ['', '', '', '', '', '', '', '', ''];
+    let currentPlayer = 'X';
+    let isGameActive = true;
+
+    const playerX_won = 'playerX_won';
+    const playerO_won = 'playerO_won';
+    const tie = 'TIE';
+
+    const WinningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    function handleResultValidation() {
+        let roundWon = false;
+        for (let i = 0; i <= 7; i++) {
+            const winCondition = WinningConditions[i];
+            const a = board[winCondition[0]];
+            const b = board[winCondition[1]];
+            const c = board[winCondition[2]];
+            if (a === '' || b === '' || c === '') {
+                continue;
+            }
+            if (a === b && b === c) {
+                roundWon = true;
+                break;
+            }
+        }
+        if (roundWon) {
+            announce(currentPlayer === 'X' ? playerX_won : playerO_won);
+            isGameActive = false;
+            return;
+        }
+        if (!board.includes('')) announce(tie);
+    }
+
+    const announce = (type) => {
+        switch(type){
+                    case playerO_won:
+                        announcer.innerHTML = 'Player <span class="playerO">O</span> Won 🎉';
+                        break;
+                    case playerX_won: 
+                        announcer.innerHTML = 'Player <span class="playerX">X</span> Won 🎉';
+                        break;
+                    case tie:
+                        announcer.innerHTML = 'TIE 🤝';
+                        break;
+                } 
+                announcer.classList.remove('hide');
+    }
+
+    const isValidAction = (tile) => {
+        if (tile.innerText === 'X' || tile.innerText === 'O') {
+            return false;
+        }
+        return true;
+    }
+
+    const updateBoard = (index) => {
+        board[index] = currentPlayer;
+    }
+
+    const changePlayer = () => {
+        PlayerDisplay.classList.remove(`player${currentPlayer}`);
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        PlayerDisplay.innerText = currentPlayer;
+        PlayerDisplay.classList.add(`player${currentPlayer}`);
+    }
+
+    const userAction = (tile, index) => {
+        if (isValidAction(tile) && isGameActive) {
+            tile.innerText = currentPlayer;
+            tile.classList.add(`player${currentPlayer}`);
+            updateBoard(index);
+            handleResultValidation();
+            if (isGameActive) changePlayer();
+
+            if (isGameActive && currentPlayer === 'O') {
+                computerAction();
+            }
+        }
+    }
+
+    const computerAction = () => {
+        let availableTiles = tiles.filter(tile => tile.innerText === '');
+        const randomTile = availableTiles[Math.floor(Math.random() * availableTiles.length)];
+        const index = tiles.indexOf(randomTile);
+
+        randomTile.innerText = currentPlayer;
+        randomTile.classList.add(`player${currentPlayer}`);
+        updateBoard(index);
+        handleResultValidation();
+        if (isGameActive) changePlayer();
+    }
+
+    const resetBoard = () => {
+        board = ['', '', '', '', '', '', '', '', ''];
+        isGameActive = true;
+        announcer.classList.add("hide");
+
+        if (currentPlayer === 'O') {
+            changePlayer();
+        }
+
+        tiles.forEach(tile => {
+            tile.innerText = '';
+            tile.classList.remove('playerX');
+            tile.classList.remove('playerO');
+        });
+    }
+
+    tiles.forEach((tile, index) => {
+        tile.addEventListener('click', () => userAction(tile, index));
+    });
+
+    resetButton.addEventListener('click', resetBoard);
+});
+
+</script>
+</head>
+<body>
+
+<body>
+    <section class="background">
+        <div class="title">
+            <h1>TIC-TAC-TOE <br> You VS Computer </h1>
+        </div>
+        <div class="display">You Are <span class="display-player playerX">X</span></div>
+        <div class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </div>
+        <div class="display winner announcer"></div>
+        <div class="controls">
+            <button id="reset">Reset</button>
+            <button id="Home"><a href="index.html">Home</a></button>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #000;
+        }
+        .navbar {
+            background-color: black;
+            position: sticky;
+            top: 0%;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            background-color: transparent;
+            background-color: black;
+        }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .nav-link {
+            font-size: 20px;
+            font-weight: 400;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            border-bottom: 2px transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-link:focus {
+            color: #ffbd39;
+            border-bottom: 2px solid #ffbd39;
+        }
+
+        .nav-link:hover {
+            color: #ffbd39;
+            transform: scaleX(1);
+            border-bottom: 2px solid #ffbd39;
+
+        }
+
+        .nav-link.active {
+            color: #ffbd39;
+            transform: scaleX(1);
+            border-bottom: 2px solid #ffbd39;
+        }
+
+        .Home {
+            background-color: black;
+            color: white;
+        }
+
+        .name {
+            color: #ffbd39;
+        }
+
+        .Home h1 {
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        .Home .typed {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .Home .Domain {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .Home .Hello {
+            font-size: 25px;
+            color: #ffbd39;
+        }
+
+        .Home button {
+            outline: none;
+            border: none;
+            border-radius: 35px;
+            padding: 30px;
+            border: 1px solid #ffbd39;
+            color: black;
+            background-color: #ffbd39;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .Home button:hover {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .daba {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            background-color: white;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-image: url(./re.jpg);
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0px 0px 15px 10px #ffbd39;
+        }
+
+        .navbar-brand:hover {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffbd39;
+        }
+
+        .navbar-brand:focus {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffbd39;
+        }
+
+        @media (max-width: 991px) {
+            .Home {
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width: 425px) {
+            .Home h1 {
+                font-size: 35px;
+                font-weight: 600;
+            }
+
+            .Home .typed {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .Home .Domain {
+                font-size: 25px;
+                font-weight: 400;
+            }
+
+            .Home .Hello {
+                font-size: 20px;
+                color: #ffbd39;
+            }
+
+            .circle {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .circle {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+
+        /* About Section */
+
+
+        .About {
+            background-color: #000;
+        }
+
+        .about-txt {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .about-txt::after {
+            content: "About";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+        }
+
+        .me {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contents {
+            color: #8B8B8B;
+            font-size: 18px;
+        }
+
+        .headings {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .A {
+            color: #8B8B8B;
+            font-size: 18px;
+        }
+
+        @media (max-width: 465px) {
+            .about-txt::after {
+                font-size: 5rem;
+            }
+
+            .contents {
+                font-size: 15px;
+            }
+
+            .headings {
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .contents {
+                font-size: 14px;
+            }
+
+            .headings {
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+
+        @media (max-width: 329px) {
+            .bca {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .boot {
+                margin-top: 0;
+            }
+
+            .Frameworks {
+                margin-top: 20px;
+            }
+
+            .contents {
+                padding-left: 10px;
+            }
+        }
+
+        .skills {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .skill {
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-size: 1em;
+            margin: 10.5px 0px;
+            color: #fff;
+        }
+
+        .skill-bar {
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 15px;
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: #f4b100;
+            border-radius: 5px;
+        }
+
+        .last {
+            font-size: 25px;
+            color: white;
+        }
+
+        .last span {
+            font-size: 28px;
+            color: #f4b100;
+        }
+
+        .linkedin {
+            outline: none;
+            border: none;
+            border-radius: 30px;
+            padding: 20px 40px;
+            border: 1px solid #ffbd39;
+            color: black;
+            background-color: #ffbd39;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .linkedin:hover {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .linkedin a {
+            font-size: inherit;
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        /* resume section */
+
+        .Resume {
+            background-color: #000;
+        }
+
+        .about-txt1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .about-txt1::after {
+            content: "Resume";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+        }
+
+        @media (max-width: 628px) {
+            .about-txt1::after {
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .about-txt1::after {
+                font-size: 4.2rem;
+            }
+        }
+
+        .Experience {
+            color: white;
+            font-size: 50px;
+        }
+
+        .expline {
+            width: 100%;
+            height: 4px;
+            border: none;
+            outline: none;
+            background-color: #ffbd39;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .expline {
+                width: 90%;
+            }
+        }
+
+        .Box {
+            background-color: #1a1a1a;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .Exp {
+            color: #ffbd39;
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .Intern {
+            color: white;
+            font-size: 25px;
+        }
+
+        .Company {
+            color: #8B8B8B;
+            font-size: 23px;
+        }
+
+        .cabout {
+            color: #8B8B8B;
+            font-size: 20px;
+        }
+
+        .cinfo li {
+            color: #8B8B8B;
+            font-size: 18px;
+        }
+
+        @media (max-width: 550px) {
+
+            .Exp {
+                font-size: 22px;
+            }
+
+            .Intern {
+                font-size: 23px;
+            }
+
+            .Company {
+                font-size: 21px;
+            }
+
+            .cabout {
+                font-size: 17px;
+            }
+
+            .cinfo li {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width:376px) {
+            .cinfo {
+                display: none;
+            }
+
+            .Exp {
+                font-size: 20px;
+            }
+
+            .Intern {
+                font-size: 20px;
+            }
+
+            .Company {
+                font-size: 18px;
+            }
+
+            .cabout {
+                font-size: 15px;
+            }
+        }
+
+        /* projects section */
+
+        .Projects {
+            background-color: black;
+        }
+
+        .Projects .about-txt::after {
+            content: "Projects";
+        }
+
+        @media (max-width:658px) {
+            .Projects .about-txt::after {
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width:440px) {
+            .Projects .about-txt::after {
+                font-size: 4.3rem;
+            }
+        }
+
+        @media (max-width:320px) {
+            .Projects .about-txt::after {
+                font-size: 4rem;
+            }
+        }
+
+        .PName {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out
+        }
+
+        .Show {
+            transition: transform 0.3s ease-in-out
+        }
+
+        .Show:hover {
+            transform: scale(1.08)
+        }
+
+        .PName:hover {
+            color: #ffbd39;
+            cursor: pointer;
+        }
+
+        .Projects h1 {
+            font-size: 40px;
+            font-weight: 900;
+            color: white;
+        }
+
+        .Projects .C {
+            font-size: 27px;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 450px) {
+            .PName {
+                font-size: 20px;
+            }
+
+            .Projects .A {
+                font-size: 15px;
+            }
+
+            .Projects h1 {
+                font-size: 30px;
+
+            }
+
+            .Projects .C {
+                font-size: 20px;
+
+            }
+        }
+
+        .Contact {
+            background-color: #000;
+        }
+
+        .Contact .about-txt::after {
+            content: "Contact";
+        }
+
+        @media (max-width:658px) {
+            .Contact .about-txt::after {
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width:440px) {
+            .Contact .about-txt::after {
+                font-size: 4.3rem;
+            }
+        }
+
+        @media (max-width:320px) {
+            .Contact .about-txt::after {
+                font-size: 4rem;
+            }
+        }
+
+        .Ccircle {
+            width: 120px;
+            height: 120px;
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont {
+            font-size: 20px;
+            font-weight: normal;
+            color: white;
+        }
+
+        .contl {
+            color: white;
+            font-size: 17px;
+        }
+
+        .Ccircle i {
+            font-size: 35px;
+            color: #ffbd39;
+        }
+
+        .contl a {
+            color: inherit;
+            text-decoration: inherit;
+            font-size: inherit;
+        }
+
+        .question {
+            font-size: 35px;
+            color: white;
+        }
+
+        .gola {
+            background-color: #1a1a1a;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffbd39;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .GB {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gola i {
+            font-size: 30px;
+        }
+
+        .gola a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .gola:hover {
+            color: white;
+        }
+
+        .typed-cursor {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg text-center">
+        <div class="container py-2">
+            <a class="navbar-brand" href="#">HR Jaya Surya Singh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#Resume">Resume</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="Home" id="Home">
+        <div class="container py-5">
+            <div class="row py-3">
+                <div class="col-lg-6 order-lg-2 daba py-5">
+                    <div class="circle">
+
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 py-5">
+                    <p class="py-2 Hello">Hello!</p>
+                    <h1 class="py-2 pb-4">I'm <span class="name">HR Jaya Surya <br> Singh </span></h1>
+                    <span class="typed"></span>
+                    <p class="py-2 pt-4 Domain">A FrontEnd Web Developer</p>
+                    <button class="py-3">MY WORKS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="About" id="About">
+        <div class="container pb-4">
+            <div class="row pb-5">
+                <h1 class="about-txt">About</h1>
+                <div class="data pt-3">
+                    <p class="A py-5 text-center">
+                        I am a passionate web developer specializing in front-end development
+                        with proficiency in HTML, CSS, JavaScript, and Bootstrap. I create
+                        visually appealing, user-friendly, and responsive websites. Additionally, I
+                        am a dedicated DSA (Data Structures and Algorithms) student,
+                        continuously learning to improve my problem-solving capabilities. My
+                        goal is to leverage my expertise and creativity to contribute to
+                        innovative web development projects that captivate and engage users.
+                    </p>
+                </div>
+                <div class="col-lg-6 py-4 order-lg-2">
+                    <div class="me">
+                        <div class="headings">
+                            <p class="heading">Profile:</p>
+                            <p class="heading">Domain:</p>
+                            <p class="heading">Education:</p>
+                            <p class="heading Frameworks">Frameworks:</p>
+                            <p class="heading">Other Skills:</p>
+                            <p class="heading">Interest:</p>
+                        </div>
+                        <div class="contents">
+                            <p class="content">Web developer</p>
+                            <p class="content">Frontend Developer</p>
+                            <p class="content bca">Bachelor Of Computer Applications</p>
+                            <p class="content Boot">Bootstrap</p>
+                            <p class="content">Python,Dsa,Git</p>
+                            <p class="content">Travelling,Sports,Esports</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="skills">
+                        <div class="skill">
+                            <p class="skill-name">FrontEnd Development 95%</p>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <p class="skill-name">PYTHON 85%</p>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <p class="skill-name">DSA 75%</p>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <p class="skill-name">BootStrap 85%</p>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exit text-center order-lg-3">
+                    <p class="last"><span id="counter">10</span>+ Projects Completed</p>
+                    <button class="linkedin"><a
+                            href="https://www.linkedin.com/in/hr-jaya-surya-singh-42693927b/">LINKEDIN</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- resume section -->
+
+    <section class="Resume" id="Resume">
+        <div class="container">
+            <div class="row pt-5 m-0 ">
+                <h1 class="about-txt1 pb-3">Resume</h1>
+                <p class="py-5 text-center A">Passionate Frontend Developer with a strong foundation in HTML, CSS,
+                    JavaScript, and Bootstrap.
+                    Recently secured a web developer internship at SkillCraft Technologies, where I'm applying my skills
+                    to real-world projects. I have hands-on experience in building responsive and interactive web
+                    applications, and I'm continuously expanding my knowledge in modern frontend frameworks. Eager to
+                    contribute to projects that require creativity, problem-solving, and a keen eye for design.</p>
+                <h1 class="Experience text-center ">Experience</h1>
+                <div class="expline text-center mb-5 m-auto"></div>
+                <div class="col-lg-6 mt-2 m-auto">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">Aug 2024 - Sep 2024</h1>
+                        <p class="Intern px-4 m-0 pb-2">Web Developer Intern</p>
+                        <p class="Company px-4 m-0 pb-3">CodSoft</p>
+                        <p class="cabout px-4 m-0 pb-2">Codsoft is a tech company specializing in innovative software
+                            solutions and digital transformation.</p>
+                        <ul class="cinfo mx-4 pb-2">
+                            <li class="pb-2">Contributed to diverse projects that greatly enhanced my technical skills
+                                and problem-solving abilities, efficiently tackling complex challenges with creativity.
+                            </li>
+
+                            <li class="pb-2">Supported the development and maintenance of websites, focusing on
+                                implementing responsive layouts to ensure a seamless user experience across various
+                                devices.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2 m-auto">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">Aug 2024 - Sep 2024</h1>
+                        <p class="Intern px-4 m-0 pb-2">Web Developer Intern</p>
+                        <p class="Company px-4 m-0 pb-3">SkillCraft Technology</p>
+                        <p class="cabout px-4 m-0 pb-2">SkillCraft Technologies is a company specializing in web
+                            development and innovative digital solutions.</p>
+                        <ul class="cinfo mx-4 pb-2">
+                            <li class="pb-2">Played a key role in various projects that advanced my technical expertise
+                                and
+                                analytical thinking, enabling me to solve intricate problems with innovative solutions.
+                            </li>
+                            <li class="pb-2">Assisted in the development, maintenance, and optimization of websites,
+                                focusing on
+                                delivering responsive designs that provided a consistent user experience across all
+                                platforms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row m-auto">
+                <div class="col-lg-6 mt-2 ">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">Aug 2024 - Sep 2024</h1>
+                        <p class="Intern px-4 m-0 pb-2">Web Developer Intern</p>
+                        <p class="Company px-4 m-0 pb-3">Oasis Infobyte</p>
+                        <p class="cabout px-4 m-0 pb-2">Oasis Infobyte is a technology firm focused on delivering
+                            cutting-edge software solutions and digital transformation services</p>
+                        <ul class="cinfo mx-4 pb-2">
+                            <li class="pb-2">Played a significant role in developing and delivering advanced software
+                                solutions,
+                                enhancing client digital experiences with innovative technology.</li>
+
+                            <li class="pb-2">Contributed to projects focused on digital transformation, driving
+                                efficiency and
+                                modernizing systems to meet evolving market demands.</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2 m-auto">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">Feb 2024 - Feb 2025</h1>
+                        <p class="Intern px-4 m-0 pb-2">Full Stack Web Developer Intern</p>
+                        <p class="Company px-4 m-0 pb-3">JTD Organisation </p>
+                        <p class="cabout px-4 m-0 pb-2">JTD Foundation empowers communities through educational and
+                            developmental initiatives to create positive change.</p>
+                        <ul class="cinfo mx-4 pb-2">
+                            <li class="pb-2">Participated in diverse projects to enhance technical expertise and refine
+                                problem-solving abilities, gaining valuable hands-on experience.</li>
+
+                            <li class="pb-2">Acquired proficiency in Data Structures and Algorithms (DSA) using Python,
+                                significantly
+                                improving computational thinking and coding efficiency.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-5">
+            <div class="row py-5 m-0 ">
+                <h1 class="Experience text-center ">Education</h1>
+                <div class="expline text-center mb-5 m-auto"></div>
+                <div class="col-lg-6 my-4 m-auto">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">Oct 2022 - Sep 2025</h1>
+                        <p class="Intern px-4 m-0 pb-2">Bachelor of Computer Applications</p>
+                        <p class="Company px-4 m-0 pb-3">Shri Gnanambica Degree College </p>
+                        <p class="cabout px-4 m-0 pb-2">CGPA : 7.20</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-4 m-auto">
+                    <div class="Box m-auto">
+                        <h1 class="px-4 pt-4 pb-1 Exp">June 2020 - May2022</h1>
+                        <p class="Intern px-4 m-0 pb-2">Maths Economics Commerce</p>
+                        <p class="Company px-4 m-0 pb-3">Shri Chaitanya Junior College</p>
+                        <p class="cabout px-4 m-0 pb-2">Per : 68.8%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="download text-center pt-3">
+                <button class="linkedin text-center"><a href="./CV.pdf" download>Download CV</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+
+    <section class="Projects" id="Projects">
+        <div class="container py-5">
+            <h1 class="about-txt">Projects</h1>
+            <p class="A text-center pt-5">
+                Below are sample web development projects that highlight my skills in HTML, CSS, JavaScript, and
+                Bootstrap.</p>
+            <div class="row pt-5">
+                <div class="col-lg-4 pt-5 ">
+                    <a href="#"><img src="./organicwebsite.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">Organic Product Website</h5>
+                    <p class="A">Built with HTML, CSS, JavaScript, and Bootstrap, featuring AOS animations and
+                        FontAwesome icons for a dynamic and engaging experience. See how these elements come together
+                        for a sleek and interactive design.</p>
+                </div>
+                <div class="col-lg-4 pt-5">
+                    <a href="#"><img src="./Tictactoe.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">Tic-Tac-Toe Game</h5>
+                    <p class="A">Built with HTML, CSS, and JavaScript, this tic-tac-toe game offers both multiplayer and
+                        single-player modes against the computer. The use of modern web technologies ensures a
+                        responsive and interactive gaming experience.</p>
+                </div>
+                <div class="col-lg-4 pt-5">
+                    <a href="#"><img src="./weatherapp.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">Live Weather Website</h5>
+                    <p class="A">Built with HTML, CSS, and JavaScript, this live weather site provides real-time updates
+                        with a sleek interface. Enjoy dynamic visuals and accurate forecasts to stay informed about
+                        conditions and changes.</p>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="col-lg-4 pt-5 ">
+                    <a href="#"><img src="./Todolist.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">Todo List Website</h5>
+                    <p class="A">Built with HTML, CSS, and JavaScript, this to-do list website features a sleek and
+                        intuitive design for effortless task management. Stay organized with a clean interface that
+                        makes adding, editing, and tracking tasks both simple and engaging.</p>
+                </div>
+                <div class="col-lg-4 pt-5">
+                    <a href="#"><img src="./Stopwatch.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">StopWatch Website</h5>
+                    <p class="A">Built with HTML, CSS, and JavaScript, this stopwatch website combines a sleek interface
+                        with precise timing capabilities. Enjoy a stylish and intuitive design that makes tracking time
+                        both effortless and visually appealing.</p>
+                </div>
+                <div class="col-lg-4 pt-5">
+                    <a href="#"><img src="./Digitalwatch.png" alt="" class="img-fluid mb-3 Show"></a>
+                    <h5 class="PName py-2">Digital Watch Website</h5>
+                    <p class="A">Built with HTML, CSS, and JavaScript, this digital watch website offers a sleek, modern
+                        design for accurate timekeeping. Enjoy real-time updates with an elegant interface that combines
+                        functionality and style.</p>
+                </div>
+            </div>
+            <div class="container text-center">
+                <h1 class="py-2 pb-2 text-center">More projects on <span class="name">Github</span></h1>
+                <p class="C pb-4">Passionate about transforming concepts into responsive & user-centric web solutions.
+                </p>
+                <button class="linkedin"><a href="https://github.com/hrjayasuryasingh9">Github</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section class="Contact" id="Contact">
+        <div class="container">
+            <h1 class="about-txt">Contact</h1>
+            <p class="A text-center pt-5">
+                Below are the details to reach out to me!</p>
+            <div class="row py-5">
+                <div class="col-md-12  col-lg-6"> <!-- Change to col-md-6 -->
+                    <div class="row">
+                        <div class="col-md-6 text-center mt-5"> <!-- Change to col-md-6 -->
+                            <div class="Ccircle m-auto"><i class="fa-solid fa-signs-post"></i></div>
+                            <h1 class="cont pt-4 pb-2">ADDRESS</h1>
+                            <p class="contl ">Andra Pradesh, India</p>
+                        </div>
+                        <div class="col-md-6 text-center mt-5"> <!-- Change to col-md-6 -->
+                            <div class="Ccircle m-auto"><i class="fa-solid fa-phone"></i></div>
+                            <h1 class="cont pt-4 pb-2">CONTACT NUMBER</h1>
+                            <p class="contl ">+91 7993504365</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12  col-lg-6"> <!-- Change to col-md-6 -->
+                    <div class="row">
+                        <div class="col-md-6 text-center mt-5"> <!-- Change to col-md-6 -->
+                            <div class="Ccircle m-auto"><i class="fa-solid fa-paper-plane"></i></div>
+                            <h1 class="cont pt-4 pb-2">EMAIL</h1>
+                            <p class="contl ">hrjayasuryasingh@gmail.com</p>
+                        </div>
+                        <div class="col-md-6 text-center mt-5"> <!-- Change to col-md-6 -->
+                            <div class="Ccircle m-auto"><i class="fa-solid fa-earth-americas"></i></i></div>
+                            <h1 class="cont pt-4 pb-2">Resume</h1>
+                            <p class="contl "><a href="./CV.pdf" download>Resume link</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <p class="question">Have a Question?</p>
+                <div>
+                    <button class="linkedin"><a href="https://github.com/hrjayasuryasingh9">CLICK
+                            HERE</a></button>
+                </div>
+                <p class="A pt-4">Find me on</p>
+                <div class="GB pb-5">
+                    <div class="gola mx-1"><a href="https://www.facebook.com/profile.php?id=100037091272152"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div class="gola mx-1"><a href="https://www.instagram.com/___iam_surya/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></div>
+                    <div class="gola mx-1"><a href="https://github.com/hrjayasuryasingh9" target="_blank"><i
+                                class="fa-brands fa-github"></i></a></div>
+                    <div class="gola mx-1"><a href="https://www.linkedin.com/in/hr-jaya-surya-singh-42693927b/"
+                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #000;">
+        <div class="container py-5 text-center">
+            <div class="row py-5">
+                <p class="A">Copyright <i class="fa-regular fa-copyright"></i> 2024 All rights reserved @ HR Jaya Surya
+                    Singh</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.scrollspy({ target: '#navbarSupportedContent' }); 
+            const counter = document.getElementById("counter");
+            const end = parseInt(counter.textContent, 10);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                counter.textContent = ++current;
+                if (current === end) clearInterval(timer);
+            }, 300);
+        });
+        var typed = new Typed(".typed", {
+            strings: ["Programmer", "Developer", "DSA Enthusiast"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
