@@ -17,7 +17,7 @@ A sleek and user-friendly calculator with real-time calculations and a clean int
 ### 2. **💼 Personal Portfolio Website**
 My personal portfolio showcasing my skills, background, and key projects in a modern and interactive design.
 
-![Personal Portfolio](Personal%20Portfolio/personal-portfolio-preview.png)
+![Personal Portfolio](Personal%20Portfolio/portfolio-preview.png)
 [View Live Demo](https://hrjayasuryasingh9.github.io/FrontEnd/Personal%20Portfolio/)
 
 ### 3. **🌐 Responsive Landing Page**
