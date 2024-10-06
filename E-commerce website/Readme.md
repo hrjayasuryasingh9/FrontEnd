@@ -1,7 +1,7 @@
 # 🛍️ E-commerce Website
 
 <p align="center">
-  <img src="web.jpg" alt="assets/Screenshots/main.jpg">
+  <img src="assets/Screenshots/Main.jpg" alt="">
 </p>
 
 ## Project Overview
