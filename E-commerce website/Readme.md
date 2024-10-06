@@ -5,29 +5,30 @@
 </p>
 
 ## Project Overview
-An intuitive and feature-rich **e-commerce platform** designed for seamless online shopping. Whether browsing from a mobile or desktop, this website ensures a smooth shopping experience with essential features like user authentication, shopping cart, and a quick checkout process.
+A dynamic **e-commerce platform** offering a seamless online shopping experience. This website features **light and dark themes**, along with interactive product displays, providing users with a visually engaging shopping experience across devices.
 
 ---
 
 ## 🚀 Features
 
-- **Responsive Design**: Optimized for all devices, ensuring a consistent user experience on mobile, tablet, and desktop.
+- **Dynamic Product Rendering**: Products are dynamically loaded and displayed from the backend, ensuring updated listings without page reloads.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop for a consistent user experience.
 - **User Authentication**: Secure login and account creation for personalized shopping.
 - **Product Categories**: Easy navigation with well-organized product categories.
 - **Shopping Cart**: Add products to your cart for easy access and management.
 - **Streamlined Checkout**: Simplified and secure process to complete purchases quickly.
+- **Light and Dark Themes**: Users can switch between light and dark modes for their preferred viewing experience.
 - **Contact Form**: Allows users to reach out with inquiries or feedback.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML**: For the website’s structure and content.
-- **CSS**: For sleek and modern styling.
-- **JavaScript**: Adds interactivity and smooth functionality.
+- **HTML**: Structure and content of the website.
+- **CSS**: Styling and theme management (light/dark modes).
+- **JavaScript**: Interactive elements, dynamic product rendering, and theme toggling.
 - **Bootstrap**: Ensures responsive design and easy component integration.
-- **AOS**: Brings life to the page with scroll animations.
-- **Font Awesome**: Includes icons for enhanced visual appeal.
+- **Font Awesome**: Icon support for an enhanced UI.
 
 ---
 
@@ -36,13 +37,13 @@ An intuitive and feature-rich **e-commerce platform** designed for seamless onli
 <p align="center">
   <img src="screenshot1.jpg" alt="Home Page Preview" width="600">
   <br>
-  <em>Home page showcasing featured products</em>
+  <em>Home page showcasing dynamically rendered products</em>
 </p>
 
 <p align="center">
   <img src="screenshot2.jpg" alt="Product Page Preview" width="600">
   <br>
-  <em>Product details page with additional information</em>
+  <em>Product details page with more information</em>
 </p>
 
 <p align="center">
