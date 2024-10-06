@@ -35,19 +35,19 @@ A dynamic **e-commerce platform** offering a seamless online shopping experience
 ## 📸 Preview
 
 <p align="center">
-  <img src="assets/Screenshots/Shop.jpg" alt="Home Page Preview" width="600">
+  <img src="assets/Screenshots/Shop.png" alt="Home Page Preview" width="600">
   <br>
   <em>Home page showcasing dynamically rendered products</em>
 </p>
 
 <p align="center">
-  <img src="assets/Screenshots/Products.jpg" alt="Product Page Preview" width="600">
+  <img src="assets/Screenshots/Product.jpg" alt="Product Page Preview" width="600">
   <br>
   <em>Product details page with more information</em>
 </p>
 
 <p align="center">
-  <img src="assets/Screenshots/Cart.jpg" alt="Shopping Cart Preview" width="600">
+  <img src="assets/Screenshots/Cart.png" alt="Shopping Cart Preview" width="600">
   <br>
   <em>Shopping cart view displaying selected items</em>
 </p>
